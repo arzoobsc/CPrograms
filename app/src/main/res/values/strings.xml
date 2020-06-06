@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">C Programs</string>
+
+    <!-- TestDevice ID -->
+    <string name="TestDevice_ID">CEB074BB2F4582DC9D1265BFBEAA2759</string>
+
+    <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+    <string name="Sample_App_ID">ca-app-pub-3940256099942544~3347511713</string>
+    <!-- Sample ad unit ID :ca-app-pub-3940256099942544/1033173712 -->
+    <string name="Sample_Interstitial_Adunit_ID">ca-app-pub-3940256099942544/1033173712</string>
+    <!--sample Banner ads:adUnitId="ca-app-pub-3940256099942544/6300978111"-->
+    <string name="Sample_Banner_Adunit">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- App ID -->
+    <string name="App_ID">ca-app-pub-4937855952209247~6193370154</string>
+    <!-- Interstitial 1 Ad Unit ID -->
+    <string name="Interstitial1_adunit_ID">ca-app-pub-4937855952209247/3132092547</string>
+    <!-- Banner 1 Ad unit ID -->
+    <string name="Banner1_adunit_ID">ca-app-pub-4937855952209247/1180323413</string>
+    <!-- Banner 2 Ad unit ID -->
+    <string name="Banner2_adunit_ID">ca-app-pub-4937855952209247/2706417250</string>
+
+    <string name="demo">
+        Lorem Ipsum is simply dummy text of the printing and typesetting \n
+        industry. Lorem Ipsum has been the industry\'s standard dummy \n
+        text ever since the 1500s, when an unknown printer took a galley\n
+        of type and scrambled it to make a type specimen book. It has\n
+        survived not only five centuries, but also the leap into electronic\n
+        typesetting, remaining essentially unchanged. It was popularised\n
+        in the 1960s with the release of Letraset sheets containing \n
+        Lorem Ipsum passages, and more recently with desktop publishing\n
+        software like Aldus PageMaker including versions of Lorem Ipsum.
+    </string>
+
+    <string name="text_Demo_Singleline">Simple Text</string>
+
+</resources>
