@@ -4,16 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ProgrammsActivity extends AppCompatActivity {
+public class ProgramsActivity extends AppCompatActivity {
 
     TextView tvCode,tvHeading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_programms);
+        setContentView(R.layout.activity_programs);
 
         tvCode = findViewById(R.id.tv1);
         tvHeading = findViewById(R.id.tvheading);

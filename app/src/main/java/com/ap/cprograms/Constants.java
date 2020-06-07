@@ -4,8 +4,6 @@ public class Constants {
 
     Constants (){}
 
-
-
     static final String Vowel_Consonant =
             "/* Vowel or Consonant */\n" +
                     "\n" +

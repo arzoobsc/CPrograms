@@ -2,19 +2,14 @@ package com.ap.cprograms;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -36,25 +31,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        MobileAds.initialize(this, getString(R.string.App_ID));
-        mAdView1 = new AdView(this);
-        mAdView1.setAdSize(AdSize.BANNER);
-        mAdView1.setAdUnitId(getResources().getString(R.string.Banner1_adunit_ID));
-        try {
-            mAdView1.loadAd(new AdRequest.Builder()
-                    .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
-                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getResources().getString(R.string.Interstitial1_adunit_ID));
-        mInterstitialAd.loadAd(new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
-                .build());
+// Add Views
+//        MobileAds.initialize(this, getString(R.string.App_ID));
+//        mAdView1 = new AdView(this);
+//        mAdView1.setAdSize(AdSize.BANNER);
+//        mAdView1.setAdUnitId(getResources().getString(R.string.Banner1_adunit_ID));
+//        try {
+//            mAdView1.loadAd(new AdRequest.Builder()
+//                    .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
+//                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build());
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId(getResources().getString(R.string.Interstitial1_adunit_ID));
+//        mInterstitialAd.loadAd(new AdRequest.Builder()
+//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
+//                .build());
 
         initView();
 //        mAdViews();
@@ -68,39 +63,41 @@ public class MainActivity extends AppCompatActivity {
 
         gotoProgramActivity();
 
-        mInterstitialAd.setAdListener(new AdListener(){
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
+//        Interstitial Add
 
-                Log.i(TAG, "onAdLoaded: ");
-            }
-
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-
-                mInterstitialAd.loadAd(new AdRequest.Builder()
-                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                        .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
-                        .build());
-
-                Log.i(TAG, "onAdClosed: ");
-
-            }
-
-            @Override
-            public void onAdFailedToLoad(int i) {
-                super.onAdFailedToLoad(i);
-
-                mInterstitialAd.loadAd(new AdRequest.Builder()
-                        .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
-                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                        .build());
-
-                Log.i(TAG, "onAdFailedToLoad: ");
-            }
-        });
+//        mInterstitialAd.setAdListener(new AdListener(){
+//            @Override
+//            public void onAdLoaded() {
+//                super.onAdLoaded();
+//
+//                Log.i(TAG, "onAdLoaded: ");
+//            }
+//
+//            @Override
+//            public void onAdClosed() {
+//                super.onAdClosed();
+//
+//                mInterstitialAd.loadAd(new AdRequest.Builder()
+//                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                        .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
+//                        .build());
+//
+//                Log.i(TAG, "onAdClosed: ");
+//
+//            }
+//
+//            @Override
+//            public void onAdFailedToLoad(int i) {
+//                super.onAdFailedToLoad(i);
+//
+//                mInterstitialAd.loadAd(new AdRequest.Builder()
+//                        .addTestDevice("2D1BA8A67F41AF7B21E2846EE0541B11")
+//                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                        .build());
+//
+//                Log.i(TAG, "onAdFailedToLoad: ");
+//            }
+//        });
 
     }
 
@@ -159,16 +156,16 @@ public class MainActivity extends AppCompatActivity {
 //                Snackbar.make(view, listItemPOJO.getTitle().toString()+" was Clicked",Snackbar.LENGTH_LONG).show();
 //                /*mListItemPOJOS androidPOJO = (mListItemPOJOS) adapter.getItem(position);
 //                Snackbar.make(view, androidPOJO.getName().toString() +" was Clicked",Snackbar.LENGTH_LONG).show();*/
-                Log.d(TAG, "Position :" + position + " Id :" + id + " "+mInterstitialAd.isLoaded());
+//                Log.d(TAG, "Position :" + position + " Id :" + id + " "+mInterstitialAd.isLoaded());
 
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
+//                if (mInterstitialAd.isLoaded()) {
+//                    mInterstitialAd.show();
+//
+//                } else {
+//                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+//                }
 
-                } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
-                }
-
-                Intent intent = new Intent(MainActivity.this, ProgrammsActivity.class);
+                Intent intent = new Intent(MainActivity.this, ProgramsActivity.class);
 
                 switch (position) {
                     case 0:
@@ -315,9 +312,9 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         long PERIOD = 2000;
         if (back_pressed_time + PERIOD > System.currentTimeMillis()) {
-            if (mInterstitialAd.isLoaded()){
-                mInterstitialAd.show();
-            }
+//            if (mInterstitialAd.isLoaded()){
+//                mInterstitialAd.show();
+//            }
             super.onBackPressed();
         }
         else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();

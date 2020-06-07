@@ -2,6 +2,8 @@ package com.ap.cprograms;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -25,12 +27,12 @@ public class HomeActivty extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
 
+    Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activty);
-
-
 //        To get Screen width and height
 //        in my case Width: 720 Height: 1344 Redmi 5
         final int screen_width = getWindowManager().getDefaultDisplay().getWidth();
